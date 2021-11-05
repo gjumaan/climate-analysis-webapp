@@ -1,6 +1,5 @@
 # Import dependencies
 from flask import Flask, request, redirect, render_template, jsonify
-from sqlalchemy.sql.expression import null
 
 # Import route functions
 from routes import precipitation, stations, tobs, start_date, start_end_date
@@ -43,7 +42,7 @@ def call_tobs():
         jsonify(tobs())
     )
 
-#Create a function that accepts either a single date input or a ranged date input from the front-end and re-directs to the appropirate route 
+#Create a function that accepts either a single date input or a ranged date input from the front-end and re-directs to the appropriate routes
 @app.route('/', methods=['GET','POST'])
 def get_start_date_input():
     print(request.form.get('date'))
