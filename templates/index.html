@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Climate App</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}" />
+    </head>
+    <body>
+
+        <h1 class='header'>Available Routes</h1>
+
+        <div class="vertical-menu">
+            <a href='/api/v1.0/precipitation'>Precipitation Data</a>
+            <a href='/api/v1.0/stations'>All Stations</a>
+            <a href='/api/v1.0/tobs'>TOBS for Station USC00519281</a>
+            <form method="POST">
+                Start Date:
+                <input name="date">
+                <input type="submit" name='action' value='start'>
+            </form>
+            <form method="POST">
+                Start-End Date:
+                <input name="start-date">
+                <input name="end-date">
+                <input type="submit" name='action' value='start-end'>
+            </form>
+        </div>
+
+    </body>
+</html>

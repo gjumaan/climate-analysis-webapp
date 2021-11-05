@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.vertical-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0 22rem;
+}
+  
+.vertical-menu a, form {
+    margin-bottom: 1rem;
+    padding: 12px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    background-color: darkseagreen;
+    border-style: solid;
+    border-color: dimgrey;
+}
+
+
+  
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu form:hover {
+    background-color: #ccc;
+}
