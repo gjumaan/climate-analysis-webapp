@@ -45,7 +45,6 @@ def call_tobs():
 #Create a function that accepts either a single date input or a ranged date input from the front-end and re-directs to the appropriate routes
 @app.route('/', methods=['GET','POST'])
 def get_start_date_input():
-    print(request.form.get('date'))
     if request.form['action'] == 'start':
         if bool(request.form.get('date').strip()):
             date = request.form.get('date')
